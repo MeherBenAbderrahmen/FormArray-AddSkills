@@ -1,1 +1,35 @@
-<p>liste-produit works!</p>
+<div class="offset-6 form-group">
+    <div class="col-md-4"><br>
+      <button type="button" class="btn btn-success" routerLink="/ajouterProduit">Ajouter</button>
+    </div>
+  </div>
+  <div class="container">
+      <h2>La liste des utilisateur</h2>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Nom Produit</th>
+            <th>Quantite Produit</th>
+            <th>Quantite disponible</th>
+            <th>Categorie Produit</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users; let i = index">
+            <td>{{(i+1)}}</td>
+            <td>{{ user.nomProduit}}</td>
+            <td>{{ user.quantiteProduit}}</td>
+            <td>{{ user.dispoProduit}}</td>
+            <td>{{ user.categorieProduit}}</td>
+            <td><button class="btn btn-update" [routerLink]="['/modifierProduit', i]"> <img src="../../assets/img/icons8-edit-48.png"></button>
+               <button class="btn btn-delete" (click)="supprimerElement(i)"> <img src="../../assets/img/icons8-ajouter-une-corbeille-24.png"></button>
+            </td>
+          </tr>
+         </tbody>
+      </table>
+    </div>
+  
+  
+  

@@ -1,1 +1,87 @@
-<p>modifier-produit works!</p>
+
+
+
+ <form [formGroup]="profileForm"  >
+   
+    
+    <!-- Form Name -->
+    <h2 class="offset-4">Formulaire d'ajout produit</h2>
+    
+    <!-- Text input nom produit-->
+    
+    <div class="offset-3 form-group">
+      <label class="col-md-12 control-label">Nom Produit</label>  
+      <div class="col-md-8 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input  name="nomProduit" placeholder="Nom Produit" class="form-control"  type="text" 
+      id="materialRegisterFormnomProduit" formControlName="nomProduit" >
+      <mdb-error *ngIf="submitted && profileForm.controls.nomProduit.hasError('required')">Vérifiez votre saisie</mdb-error>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text input quantite-->
+    
+    <div class="offset-3 form-group">
+      <label class="col-md-4 control-label" >Quantite Produit</label> 
+        <div class="col-md-8 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="quantiteProduit" placeholder="Quantite" class="form-control"  type="text" 
+      id="materialRegisterFormquantiteProduit" formControlName="quantiteProduit">
+      <mdb-error *ngIf="submitted && profileForm.controls.quantiteProduit.hasError('required')">Vérifiez la quantite</mdb-error>
+        </div>
+      </div>
+    </div>
+     <!-- Text input Qte dispo-->
+    
+     <div class="offset-3 form-group">
+        <label class="col-md-4 control-label" >Quantite disponible</label> 
+          <div class="col-md-8 inputGroupContainer">
+          <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input name="dispoProduit" placeholder="dispo" class="form-control"  type="text" 
+        id="materialRegisterFormdispoProduit" formControlName="dispoProduit">
+        <mdb-error *ngIf="submitted && profileForm.controls.dispoProduit.hasError('required')">Vérifiez la quantite disponible</mdb-error>
+          </div>
+        </div>
+      </div>
+      <!-- Text input categorie-->
+      <div class="offset-3 form-group"> 
+      <label class="col-md-4 control-label">Categorie Produit</label>
+        <div class="col-md-8 selectContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+        <select name="categorieProduit" class="form-control selectpicker" 
+        id="materialRegisterFormcategorieProduit" formControlName="categorieProduit">
+        <mdb-error *ngIf="submitted && profileForm.controls.categorieProduit.hasError('required')">Vérifiez selectionner une categorie</mdb-error>
+
+          <option value="">Veuillez selectionner une categorie</option>
+          <option>Cat1</option>
+          <option>Cat2</option>
+          <option >Cat3</option>
+          <option >Cat4</option>
+         
+        </select>
+      </div>
+    </div>
+    </div>
+      
+   
+    
+    
+    <!-- Select Basic -->
+    
+    <!-- Success message -->
+    
+    <!-- Button -->
+    <div class="offset-6 form-group">
+      <div class="col-md-4"><br>
+        <button type="button" class="btn btn-success" [disabled]="profileForm.invalid" (click)="update()"  >Ajouter</button>
+        <button type="button" class="btn btn-danger" routerLink="/listProduit" >Annuler</button>
+      </div>
+    </div>
+    
+    </form>
+    
