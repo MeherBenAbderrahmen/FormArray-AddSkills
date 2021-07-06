@@ -6,7 +6,7 @@ import { ListeProduitComponent } from './liste-produit/liste-produit.component';
 import { ModifierProduitComponent } from './modifier-produit/modifier-produit.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/login', pathMatch: 'full',},
+  {path: '', redirectTo: '/listProduit', pathMatch: 'full',},
   {path: 'listProduit', component:ListeProduitComponent},
   {path: 'ajouterProduit', component:AjouterProduitComponent},
   {path: 'modifierProduit/:index', component:ModifierProduitComponent},
