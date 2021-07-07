@@ -1,4 +1,7 @@
 <div class="offset-6 form-group">
+  <div class="search-hero">
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching  ....">
+  </div>
     <div class="col-md-4"><br>
       <button type="button" class="btn btn-success" routerLink="/ajouterProduit">Ajouter</button>
     </div>
@@ -13,16 +16,19 @@
             <th>Quantite Produit</th>
             <th>Quantite disponible</th>
             <th>Categorie Produit</th>
+            <th>Pourcentage de vente</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let user of users; let i = index">
+          <tr *ngFor="let user of users | search :searchText ;let i=index ">
+        
             <td>{{(i+1)}}</td>
             <td>{{ user.nomProduit}}</td>
             <td>{{ user.quantiteProduit}}</td>
             <td>{{ user.dispoProduit}}</td>
             <td>{{ user.categorieProduit}}</td>
+            <td>{{ 0 | pcntVente:user.quantiteProduit:user.dispoProduit }}</td>
             <td><button class="btn btn-update" [routerLink]="['/modifierProduit', i]"> <img src="../../assets/img/icons8-edit-48.png"></button>
                <button class="btn btn-delete" (click)="supprimerElement(i)"> <img src="../../assets/img/icons8-ajouter-une-corbeille-24.png"></button>
             </td>

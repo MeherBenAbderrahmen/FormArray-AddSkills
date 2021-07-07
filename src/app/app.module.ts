@@ -7,12 +7,16 @@ import { AjouterProduitComponent } from './ajouter-produit/ajouter-produit.compo
 import { ListeProduitComponent } from './liste-produit/liste-produit.component';
 import { ModifierProduitComponent } from './modifier-produit/modifier-produit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchPipe } from './pipes/search.pipe';
+import { PcntVentePipe } from './pipes/pcnt-vente.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     AjouterProduitComponent,
     ListeProduitComponent,
-    ModifierProduitComponent
+    ModifierProduitComponent,
+    SearchPipe,
+    PcntVentePipe
   ],
   imports: [
     BrowserModule,
