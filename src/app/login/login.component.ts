@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
    // const registartions = JSON.parse(localStorage.getItem('registration') || '[]');
    // registartions.push(this.registerForm.value);
    // localStorage.setItem('registration', JSON.stringify(registartions));
-    this.route.navigate(['/listProduit'])
+    this.route.navigate(['/addSkills'])
     //console.log('users=', registartions)
   }
 

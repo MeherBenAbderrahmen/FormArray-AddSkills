@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddSkillsComponent } from './add-skills/add-skills.component';
 
 import { AjouterProduitComponent } from './ajouter-produit/ajouter-produit.component';
 import { ListeProduitComponent } from './liste-produit/liste-produit.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'listProduit', component:ListeProduitComponent},
   {path: 'ajouterProduit', component:AjouterProduitComponent},
   {path: 'modifierProduit/:index', component:ModifierProduitComponent},
+  {path: 'addSkills', component:AddSkillsComponent},
 ];
 
 @NgModule({

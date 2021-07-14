@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchPipe } from './pipes/search.pipe';
 import { PcntVentePipe } from './pipes/pcnt-vente.pipe';
 import { LoginComponent } from './login/login.component';
+import { AddSkillsComponent } from './add-skills/add-skills.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { LoginComponent } from './login/login.component';
     ModifierProduitComponent,
     SearchPipe,
     PcntVentePipe,
-    LoginComponent
+    LoginComponent,
+    AddSkillsComponent
   ],
   imports: [
     BrowserModule,
