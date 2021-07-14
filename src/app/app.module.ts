@@ -9,6 +9,7 @@ import { ModifierProduitComponent } from './modifier-produit/modifier-produit.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchPipe } from './pipes/search.pipe';
 import { PcntVentePipe } from './pipes/pcnt-vente.pipe';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { PcntVentePipe } from './pipes/pcnt-vente.pipe';
     ListeProduitComponent,
     ModifierProduitComponent,
     SearchPipe,
-    PcntVentePipe
+    PcntVentePipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

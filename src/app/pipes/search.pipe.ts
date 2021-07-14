@@ -12,8 +12,12 @@ export class SearchPipe implements PipeTransform {
     args = args.toLowerCase();
 
     //La méthode JSON.stringify() convertit une valeur JavaScript en chaîne JSON.
-    return value.filter(function (item: any) {
-      return JSON.stringify(item).toLowerCase().includes(args);
+    return value.filter((item: any) => {
+      return item?.nomProduit?.toLowerCase().includes(args) ||
+        item?.quantiteProduit?.toLowerCase().includes(args) ||
+        item?.dispoProduit?.toLowerCase().includes(args) ||
+        item?.categorieProduit?.toLowerCase().includes(args) ;
+        
 
     });
 
